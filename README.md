@@ -2,13 +2,14 @@
 
 ## Overview
 
-In this project, we will build a Robo Advisor using Amazon Lex and Amazon Lambda.  
+In this project we will build a Robo Advisor using Amazon Lex and Amazon Lambda.  Below are the action items we take to build the Robo Advisor. 
 
   * Configure the initial robo advisor
 
   * Build and test the robo advisor
 
   * Enhance the robo advisor with an Amazon Lambda function
+
 
 ## Process
 
