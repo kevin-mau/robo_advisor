@@ -46,7 +46,8 @@ Here is the build and initial test:
 ![Amazon Lex - Initial build and test](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Initial%20build%20and%20test.gif?raw=true)
 
 
-In the following section, we will enhance the Robo Advisor with an Amazon Lambda Function using Python 3.7 as the runtime programming language.
+
+Next, we will enhance the Robo Advisor with an Amazon Lambda Function using Python 3.7 as the runtime programming language.
 
 In the lambda function we will add the following validation rules:
 
@@ -64,9 +65,9 @@ After slots are validated, the bot will respond with an investment recommendatio
    
    * High: “20% bonds (AGG), 80% equities (SPY)”
 
-After finishing coding the Lambda function we test it with the four provided test events that are uploaded in the Test_Events folder in github.
+After finishing coding the Lambda function we test it with the four provided test events that you can find in the Test_Events folder in github.
 
-Here is the final Robo Advisor enhanced with the Lambda function:
+Here is the final Robo Advisor enhanced with the Lambda function showcasing both dialogs with valid and invalid data for the slots.
 
 ![Amazon Lex - Enhanced with Lambda Function](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Enhanced%20with%20Lambda%20Function.gif?raw=true)
 
