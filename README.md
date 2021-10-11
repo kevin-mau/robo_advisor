@@ -24,7 +24,7 @@ First we configure the initial Robo Advisor with these characteristics:
     Advanced options: No
     All other options: The default value
     
-Then we add a new intent named `recommendPortfolio` and begin configuring sample utterances such as "I want to save money for my retirement".
+Next we add a new intent named `recommendPortfolio` and begin configuring sample utterances such as "I want to save money for my retirement" and "I want the best option to invest for my retirement".
 
 We create four slots:
 
