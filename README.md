@@ -23,7 +23,7 @@ First we configure the initial Robo Advisor with these characteristics:
     Advanced options: No
     All other options: The default value
     
-Then we add a new intent named recommendPortfolio and begin configuring sample utterances such as "I want to save money for my retirement".
+Then we add a new intent named `recommendPortfolio` and begin configuring sample utterances such as "I want to save money for my retirement".
 
 We create four slots:
 
@@ -46,36 +46,34 @@ Here is the build and initial test:
 ![Amazon Lex - Initial build and test](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Initial%20build%20and%20test.gif?raw=true)
 
 
+In the following section, we will enhance the Robo Advisor with an Amazon Lambda Function using Python 3.7 as the runtime programming language.
 
+In the lambda function we will add the following validation rules:
 
-Next, we will split the data into training and testing datasets with `X` as the `SMA_Fast` and the `SMA_Slow` columns and `y` as the `Signal` column.
-With the training and testing datasets ready, we can first try training the baseline model.
+  * The value of `age` should be greater than zero and less than 65.
+  
+  * The value of `investment_amount` should be greater than or equal to 5000.
 
-Our baseline model will use the `SVC` classifier model from SKLearn's support vector machine (SVM) learning method to fit the training data and make
-predictions based on the testing data.
-```python
-    # From SVM, instantiate SVC classifier model instance
-    svm_model = svm.SVC()
- 
-    # Fit the model to the data using the training data
-    svm_model = svm_model.fit(X_train_scaled, y_train)
- 
-    # Use the testing data to make the model predictions
-    svm_pred = svm_model.predict(X_test_scaled)
-```
-In the next section, I will display the baseline model's classification report and a cumulative return plot that shows the actual returns vs. the strategy
-returns.  But before that I will discuss how we will modify the windows to try to optimize the trading algorithm.  For this trial, I will adjust to a 
-shorter windows strategy, with the using short- and long-window SMA values set at 1 as the short window and 5 as the long window.  
+After slots are validated, the bot will respond with an investment recommendation based on the selected risk levels, as follows:
 
-We will also use a second machine learning model.  To try and get more accuracy from our trading algorithm.  On the second ML model, we will use 
-`LogisticRegression`.  We backtest the new model with the same training and testing datasets to evaluate its performance. 
+   * None: “100% bonds (AGG), 0% equities (SPY)”
+   
+   * Low: “60% bonds (AGG), 40% equities (SPY)”
+   
+   * Medium: “40% bonds (AGG), 60% equities (SPY)”
+   
+   * High: “20% bonds (AGG), 80% equities (SPY)”
 
+After finishing coding the Lambda function we test it with the four provided test events that are uploaded in the Test_Events folder in github.
 
-## Data:
+Here is the final Robo Advisor enhanced with the Lambda function:
 
-The "emerging_markets_ohlcv.csv" file is a CSV file of historical OHLCV market data.  OHLCV is an aggregated form of market data standing for Open, High, Low, Close and Volume.
+![Amazon Lex - Enhanced with Lambda Function](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Enhanced%20with%20Lambda%20Function.gif?raw=true)
 
 ---
+
+
+
 
 ## Contributors
 
