@@ -36,13 +36,13 @@ We create four slots:
 
   * riskLevel - AMAZON.AlphaNumeric - prompt: "What level of investment risk would you like to take? (None, Low, Medium, High)"
 
-And we add confirmation prompts:
+And we add the following confirmation prompts:
     
   * Confirm: Thanks, now I will look for the best investment portfolio for you.
     
   * Cancel: I will be pleased to assist you in the future.
  
-Here is the build and initial test:
+Here is a recording of the build and initial test:
 
 ![Amazon Lex - Initial build and test](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Initial%20build%20and%20test.gif?raw=true)
 
