@@ -13,6 +13,7 @@ In this project, we will build a Robo Advisor using Amazon Lex and Amazon Lambda
 ## Process
 
 First we configure the initial Robo Advisor with these characteristics:
+
     Bot name: RoboAdvisor
     Language: English (US)
     Output voice: Salli
@@ -24,16 +25,25 @@ First we configure the initial Robo Advisor with these characteristics:
     
 Then we add a new intent named recommendPortfolio and begin configuring sample utterances such as "I want to save money for my retirement".
 
-We create four slots
-    * firstName - AMAZON.US_FIRST_NAME - prompt: "Thank you for trusting me to help, could you please give me your name?"
-    * age - AMAZON.NUMBER - prompt: "How old are you?"
-    * investmentAmount - AMAZON.NUMBER - prompt: "How much do you want to invest?"
-    * riskLevel - AMAZON.AlphaNumeric - prompt: "What level of investment risk would you like to take? (None, Low, Medium, High)"
-We add confirmation prompts:
-    * Confirm: Thanks, now I will look for the best investment portfolio for you.
-    * Cancel: I will be pleased to assist you in the future.
+We create four slots:
+
+  * firstName - AMAZON.US_FIRST_NAME - prompt: "Thank you for trusting me to help, could you please give me your name?"
+
+  * age - AMAZON.NUMBER - prompt: "How old are you?"
+ 
+  * investmentAmount - AMAZON.NUMBER - prompt: "How much do you want to invest?"
+
+  * riskLevel - AMAZON.AlphaNumeric - prompt: "What level of investment risk would you like to take? (None, Low, Medium, High)"
+
+And we add confirmation prompts:
+    
+  * Confirm: Thanks, now I will look for the best investment portfolio for you.
+    
+  * Cancel: I will be pleased to assist you in the future.
  
 Here is the build and initial test:
+
+![Amazon Lex - Initial build and test](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Initial%20build%20and%20test.gif?raw=true)
 
 
 
@@ -60,48 +70,6 @@ shorter windows strategy, with the using short- and long-window SMA values set a
 We will also use a second machine learning model.  To try and get more accuracy from our trading algorithm.  On the second ML model, we will use 
 `LogisticRegression`.  We backtest the new model with the same training and testing datasets to evaluate its performance. 
 
-## Results
-
-* Baseline SVC Model Classification Report:
-
-![baseline_svm_classification_report](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/baseline_svm_classification_report.jpg?raw=true)
-
-* Shorter window SVC Model Classification Report:
-
-![shorter_svm_classification_report](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/shorter_svm_classification_report.jpg?raw=true)
-
-* Baseline LR Model Classification Report:
-
-![baseline_lr_classification_report](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/baseline_lr_classification_report.jpg?raw=true)
-
-* Shorter window LR Model Classification Report:
-
-![shorter_lr_classification_report](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/shorter_lr_classification_report.jpg?raw=true)
-
-* Baseline SVC Model Cumulative Return Plot:
-
-![baseline_svm_return_plot](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/baseline_svm_return_plot.jpg?raw=true)
-
-* Shorter window SVC Model Cumulative Return Plot:
-
-![shorter_svm_return_plot](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/shorter_svm_return_plot.jpg?raw=true)
-
-* Baseline LR Model Cumulative Return Plot:
-
-![baseline_lr_return_plot](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/baseline_lr_return_plot.jpg?raw=true)
-
-* Shorter window LR Model Cumulative Return Plot:
-
-![shorter_lr_return_plot](https://github.com/kevin-mau/machine_learning_trading_bot/blob/main/Resources/shorter_lr_return_plot.jpg?raw=true)
-
-
-
-## Summary
-
-As the reports show, we can gain a slight 0.01 in accuracy when using a shorter window.  When using the same training and testing datasets, we were able to get more
-accurate results with the SVC classifier model over the LR classification model.
-
----
 
 ## Data:
 
