@@ -66,9 +66,9 @@ After slots are validated, the bot will respond with an investment recommendatio
    
    * High: “20% bonds (AGG), 80% equities (SPY)”
 
-After finishing coding the Lambda function we test it with the four provided test events that you can find in the Test_Events folder in github.
+Finally we test the Lambda function with the four provided test events that you can find in the Test_Events folder in github.
 
-Here is the final Robo Advisor enhanced with the Lambda function showcasing both dialogs with valid and invalid data for the slots.
+Here is the final Robo Advisor enhanced with the Lambda function showcasing both dialogs with valid and invalid data for the slots (please view in entirety, valid dialogs are recorded at the end.)
 
 ![Amazon Lex - Enhanced with Lambda Function](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Enhanced%20with%20Lambda%20Function.gif?raw=true)
 
