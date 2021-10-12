@@ -197,7 +197,7 @@ def validate_data(age, investment_amount, intent_request):
         if investment_amount < 5000:
             return build_validation_result(
                 False,
-                "age",
+                "investmentAmount",
                 "The investment amount should be greater or equal to 5000, "
                 "please provide a correct investment amount greater or equal to 5000 dollars.",
             )
