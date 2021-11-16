@@ -1,5 +1,6 @@
 # Robo Advisor
 
+---
 ## Overview
 
 In this project we will build a Robo Advisor using Amazon Lex and Amazon Lambda.  Below are the action items we take to build the Robo Advisor. 
@@ -10,7 +11,7 @@ In this project we will build a Robo Advisor using Amazon Lex and Amazon Lambda.
 
   * Enhance the robo advisor with an Amazon Lambda function
 
-
+---
 ## Process
 
 First we configure the initial Robo Advisor with these characteristics:
@@ -42,10 +43,9 @@ And we add the following confirmation prompts:
     
   * Cancel: I will be pleased to assist you in the future.
  
-Here is a recording of the build and initial test:
+## Here is a recording of the build and initial test:
 
-![Amazon Lex - Initial build and test](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Initial%20build%20and%20test.gif?raw=true)
-
+![Amazon Lex - Initial build and test](https://user-images.githubusercontent.com/85687829/141929217-bcefd4cb-72ef-432a-891b-c3139dbb66a7.gif)
 
 
 Next, we will enhance the Robo Advisor with an Amazon Lambda Function using Python 3.7 as the runtime programming language.
@@ -68,14 +68,11 @@ After slots are validated, the bot will respond with an investment recommendatio
 
 Finally we test the Lambda function with the four provided test events that you can find in the Test_Events folder in github.
 
-Here is the final Robo Advisor enhanced with the Lambda function showcasing both dialogs with valid and invalid data for the slots (please view in entirety, dialogs with valid data are showcased at the end.)
+## Here is the final Robo Advisor enhanced with the Lambda function showcasing both dialogs with valid and invalid data for the slots:
 
-![Amazon Lex - Enhanced with Lambda Function](https://github.com/kevin-mau/robo_advisor/blob/main/Resources/Amazon%20Lex%20-%20Enhanced%20with%20Lambda%20Function.gif?raw=true)
+![Amazon-Lex-with-Lambda](https://user-images.githubusercontent.com/85687829/141929409-b86f29b5-fd31-46ef-82ae-ea551b1e1b39.gif)
 
 ---
-
-
-
 
 ## Contributors
 
