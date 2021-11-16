@@ -205,6 +205,7 @@ def validate_data(age, investment_amount, intent_request):
     # A True results is returned if age or amount are valid
     return build_validation_result(True, None, None)
 
+# This function receives the risk_level argument, matches it in the dictionary, and returns the recommendation.
 def get_recommendation(risk_level):
     risk_levels = {
         "none": "100% bonds (AGG), 0% equities (SPY)",
@@ -213,7 +214,7 @@ def get_recommendation(risk_level):
         "high": "20% bonds (AGG), 80% equities (SPY)"
     }
     return risk_levels[risk_level.lower()]       
-
+# usage of .lower() ensures that user input will match regardless if they typed in upper-case or lower-case
 
 ### Intents Dispatcher ###
 def dispatch(intent_request):
